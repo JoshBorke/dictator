@@ -1,0 +1,13 @@
+## Interface: 20400
+## Title: Dictator
+## Notes: A mod to facilitate multi-boxing.
+## Author: JoshBorke
+## Version: 0.1
+
+embeds.xml
+
+Dictator.lua
+
+WhisperRelay.lua
+FollowTheLeader.lua
+
