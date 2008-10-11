@@ -8,7 +8,7 @@ embeds.xml
 
 Dictator.lua
 
-WhisperRelay.lua
+Gossiper.lua
 FollowTheLeader.lua
 PartyHarder.lua
 LootPass.lua

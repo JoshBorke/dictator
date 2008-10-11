@@ -13,4 +13,17 @@ function Dictator:OnDisable()
 end
 
 function Dictator:OnCommReceived(prefix, message, distribution, sender)
+	if (prefix == "DIC" and sender == self.db.leader) then
+		local command, args = string.split(" ", message, 2)
+		if (command == "newleader") then
+			self.db.leader = string.split(" ", args, 2)
+			self:NewLeader()
+		end
+	end
+end
+
+function Dictator:Log(modName, message)
+end
+
+function Dictator:Warn(modName, message)
 end
