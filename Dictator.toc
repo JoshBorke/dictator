@@ -10,4 +10,6 @@ Dictator.lua
 
 WhisperRelay.lua
 FollowTheLeader.lua
-
+PartyHarder.lua
+LootPass.lua
+Looter.lua
