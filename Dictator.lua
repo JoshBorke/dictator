@@ -26,4 +26,13 @@ function Dictator:Log(modName, message)
 end
 
 function Dictator:Warn(modName, message)
+	DEFAULT_CHAT_FRAME:AddMessage("Dictator: "..string.format("%s: %s", modName, message))
+end
+
+function Dictator:NewLeader()
+	for name, module in self:IterateModules() do
+		if (type(module.NewLeader) == "func") then
+			module:NewLeader()
+		end
+	end
 end

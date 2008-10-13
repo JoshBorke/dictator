@@ -13,3 +13,5 @@ FollowTheLeader.lua
 PartyHarder.lua
 LootPass.lua
 Looter.lua
+IWinButtons.lua
+SimonSays.lua
