@@ -15,3 +15,4 @@ LootPass.lua
 Looter.lua
 IWinButtons.lua
 SimonSays.lua
+BigBrother.lua
