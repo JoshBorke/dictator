@@ -1,4 +1,5 @@
 local Dictator = LibStub("AceAddon-3.0"):GetAddon("Dictator")
+local L = DictatorStrings
 
 local optGetter, optSetter
 do
