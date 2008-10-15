@@ -1,3 +1,5 @@
+-- this module takes care of interacting with npcs
+-- probably be the hardest to write
 local modName = "SimonSays"
 local dictator = LibStub("AceAddon-3.0"):GetAddon("Dictator")
 local mod = dictator:NewModule(modName, {}, "AceEvent-3.0")
