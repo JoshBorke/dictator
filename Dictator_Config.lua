@@ -60,7 +60,7 @@ local function getOptions()
 							order = 1,
 							cmdHidden = true,
 						},
-					|   memberList = {
+						memberList = {
 							type = "multiselect",
 							name = L["Team List"],
 							desc = L["Characters in your 'group'; check to enable communication with them."],
