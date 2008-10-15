@@ -1,0 +1,10 @@
+<Ui xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="modules\BigBrother.lua"/>
+	<Script file="modules\FollowTheLeader.lua"/>
+	<Script file="modules\Gossiper.lua"/>
+	<Script file="modules\IWinButtons.lua"/>
+	<Script file="modules\Looter.lua"/>
+	<Script file="modules\LootPass.lua"/>
+	<Script file="modules\PartyHarder.lua"/>
+	<Script file="modules\SimonSays.lua"/>
+</Ui>

@@ -7,6 +7,8 @@
 embeds.xml
 
 Dictator.lua
+Dictator_Config.lua
+modules.xml
 
 Gossiper.lua
 FollowTheLeader.lua
