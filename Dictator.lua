@@ -40,6 +40,7 @@ function Dictator:OnCommReceived(prefix, message, distribution, sender)
 end
 
 function Dictator:Log(modName, message)
+	ChatFrame2:AddMessage("Dictator: "..string.format("%s: %s", modName, message))
 end
 
 function Dictator:Warn(modName, message)

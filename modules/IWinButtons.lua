@@ -4,6 +4,53 @@ local mod = dictator:NewModule(modName, {}, "AceEvent-3.0")
 local player = UnitName("player")
 local oldMaster
 
+local db
+local defaults = { profile = {} }
+
+local optGetter, optSetter
+do
+	local mod = Coords
+	function optGetter(info)
+		local key = info[#info]
+		return db[key]
+	end
+
+	function optSetter(info, value)
+		local key = info[#info]
+		db[key] = value
+		mod:Refresh()
+	end
+end
+
+local options
+local function getOptions()
+	if not options then
+		options = {
+			type = "group",
+			name = L["IWinButtons"],
+			arg = modName,
+			get = optGetter,
+			set = optSetter,
+			args = {
+				intro = {
+					order = 1,
+					type = "description",
+					name = L["A module to maintain a set of macros across all toons"],
+				},
+				enabled = {
+					order = 2,
+					type = "toggle",
+					name = L["Enable IWinButtons"],
+					get = function() return dictator:GetModuleEnabled(modName) end,
+					set = function(info, value) dictator:SetModuleEnabled(modName, value) end,
+				},
+			},
+		}
+	end
+	
+	return options
+end
+
 function mod:OnEnable()
 	self:RegisterEvent("PLAYER_REGEN_ENABLED")
 end
@@ -14,6 +61,12 @@ end
 
 function mod:OnInitialize()
 	self:UpdateLeader()
+	self.db = dictator.db:RegisterNamespace(modName, defaults)
+	
+	self:Refresh()
+	
+	self:SetEnabledState(dictator:GetModuleEnabled(modName))
+	dictator:RegisterModuleOptions(modName, getOptions, L["Coordinates"])
 end
 
 function mod:UpdateLeader()
